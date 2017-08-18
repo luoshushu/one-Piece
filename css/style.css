@@ -1,0 +1,406 @@
+/*reset*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:PilGi, "Imprint MT Shadow","Brush Script MT";
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*reset*/
+.clearfix::after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.layout{
+    width: 1100px;
+    margin: 0 auto;
+
+}
+.button{
+    font-size: 20px;
+    color: #fff;
+    background: #f7ba3e;
+    padding: 15px 25px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: #fdc42e;
+
+}
+body,html{
+    height: 100%;
+}
+body{
+    font:14px/1.5 "微软雅黑";
+    background: #F7F7F7;
+    color: #444;
+}
+header{
+    height: 100%;
+    min-heigt:800px;
+    background: #000 url("../img/bg.png")  center center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+header::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: -1;
+
+}
+header .logo{
+    float: left;
+    color: #f7ba3e;
+    font-size: 32px;
+    margin-top: 10px;
+}
+header .nav{
+    float: right;
+}
+header .nav > li{
+    float: left;
+    margin: 10px;
+}
+header .nav > li > a{
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+}
+header .nav > li > a:hover{
+    background: #f7ba3e;
+}
+header .introduce{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+header .introduce > h1{
+    font-size: 32px;
+}
+header .introduce > h2{
+    font-size: 50px;
+    margin-top: 20px;
+}
+header .introduce .button{
+    margin-top: 20px;
+}
+
+section{
+    margin-top: 100px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+section:first-of-type{
+    /*background-color: #FFF;*/
+    box-shadow: 0 2px 4px 1px rgba(0,0,0, 0.1);
+
+
+}
+section > h2{
+    font-size: 40px;
+}
+section > p{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+section > ul .iconfont{
+    font-size: 60px;
+}
+section > ul > li{
+    width: 33.33%;
+    float: left;
+    padding: 10px 20px;
+}
+section > ul p{
+    margin-top: 10px;
+}
+section .family figure{
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    height: 400px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0, 0.3);
+    border-radius: 20px;
+}
+section .family a{
+    position: relative;
+    display: block;
+    height: 330px;
+
+}
+section .family img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+}
+section .family figcaption{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+section .family p{
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+section .family a:hover::before {
+    content: '⎈';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(253,208,72,0.8);
+    color: #fff;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+
+}
+
+.describe{
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.down{
+    margin: 10px auto;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    position: relative;
+    z-index: 99;
+}
+.down:after{
+    content: ' ';
+    display: block;
+    height: calc(100% - 200px);
+    width: 0;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    border:1px solid #ccc;
+}
+.down > li > span{
+    box-shadow: 0 2px 4px 1px rgba(0,0,0, 0.1);
+    background-color: #fdc42e;
+    border: 6px solid #eee;
+    width:150px;
+    height: 150px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: block;
+    float:left;
+    position:relative;
+    right:50%;
+}
+.down > li{
+    display: block;
+    width: 150px;
+    height: 200px;
+    float:left;
+    position:relative;
+    left:50%;
+
+}
+.down > li img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+}
+.matter{
+    width: 300px;
+    height: 100px;
+    float:left;
+    position:relative;
+    top:-50%;
+    right:-90%;
+    font-size: 18px;
+
+}
+.matter-left{
+    float:right;
+    position:relative;
+    top:-50%;
+    left:-180%;
+}
+.matter > p{
+    color: #999;
+    font-style: oblique;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:4;
+}
+.matter > h4,
+.matter > p{
+    float:left;
+    margin: 0;
+    text-align: left;
+
+}
+.matter-left > h4,
+.matter-left > p{
+    float:right;
+    margin: 0;
+
+
+}
+
+
+section .group figure{
+    width: calc(33.33% - 60px);
+    margin: 30px;
+    height: 300px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0, 0.3);
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+section .group p{
+    position: relative;
+    display: block;
+    height: 100%;
+
+
+}
+section .group img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+section .group figcaption{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.icon:hover{
+    background: #fdc42e;
+}
+.icon {
+    width: 3em;
+    height: 3em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    margin:10px;
+    background: #222;
+    border-radius: 50%;
+}
+section .p{
+    font-style: inherit;
+    width: 70%;
+    margin: 100px auto;
+
+}
+.contact{
+    width: 100%;
+    height: 400px;
+    background: #fff url("../img/plat.jpg") no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0, 0.1);
+    font-size: 20px;
+}
+.contact .private,
+.email,
+.cellphone{
+    text-align: left;
+    width: 45%;
+}
+.contact .message{
+    text-align: right;
+    display: inline-block;
+    width: 45%;
+    float: right;
+}
+.contact .message textarea{
+    margin-top: 20px;
+    width: 100%;
+    height: 180px;
+    font-size: 20px;
+}
+input[type="text"],
+input[type="email"],
+input[type="phone" ]{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #F7F7F7;
+    font-size: 20px;
+}
+.submit{
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin-top: 50px;
+
+}
+.submit > input[type="submit"]{
+    background: #fdd048;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid darkgoldenrod;
+    color: #fff;
+    font-size: 20px;
+}
+.submit > input[type="submit"]:hover{
+    background: #fdc42e;
+}
+footer{
+    height: 100px;
+}
+footer p{
+    margin-top: 30px;
+    float: left;
+
+}
+footer .end{
+    float: right;
+    margin-top: 30px;
+
+}
+footer .end a{
+    color: #fdc42e;
+}
+footer a:hover{
+    text-decoration: underline;
+}
